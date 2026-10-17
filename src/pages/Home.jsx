@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { SERVICE_TILES, PACKAGES } from '../data/studio';
 import useReveal from '../lib/useReveal';
 import Button from '../components/Button';
@@ -52,7 +52,7 @@ function Hero() {
           <em>Lasting</em> Impressions
         </h1>
         <p className="lead hero__lead" data-reveal style={{ '--d': '0.12s' }}>
-          Premium websites crafted in Colombo for bold brands.
+          Premium websites crafted in Colombo, Sri Lanka, for bold brands.
         </p>
         <div className="hero__actions" data-reveal style={{ '--d': '0.18s' }}>
           <Button to="/contact">Get in touch</Button>
@@ -236,10 +236,6 @@ function Finale() {
 export default function Home() {
   const root = useRef(null);
   useReveal(root);
-
-  useEffect(() => {
-    document.title = 'Global Arc Solutions | Design & Engineering Studio';
-  }, []);
 
   return (
     <div ref={root}>

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './lib/theme';
+import { headTags, pageMeta } from './lib/seo';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -23,6 +24,17 @@ function ScrollManager() {
   return null;
 }
 
+// Swap the page's title, description, canonical and JSON-LD on navigation.
+// The prerendered HTML already has them; this keeps them right afterwards.
+function SeoManager() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    document.head.querySelectorAll('[data-seo]').forEach((el) => el.remove());
+    document.head.insertAdjacentHTML('afterbegin', headTags(pageMeta(pathname)));
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
     <ThemeProvider>
@@ -30,6 +42,7 @@ export default function App() {
         Skip to content
       </a>
       <ScrollManager />
+      <SeoManager />
       <Header />
       <main id="main">
         <Routes>

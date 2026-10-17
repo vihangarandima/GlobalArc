@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { getProject, nextProject } from '../data/projects';
 import useReveal from '../lib/useReveal';
@@ -15,10 +15,6 @@ export default function CaseStudy() {
   const project = getProject(slug);
   const root = useRef(null);
   useReveal(root, [slug]);
-
-  useEffect(() => {
-    if (project) document.title = `${project.name} — Case Study | Global Arc Solutions`;
-  }, [project]);
 
   if (!project) return <Navigate to="/works" replace />;
 
