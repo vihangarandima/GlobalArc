@@ -84,9 +84,6 @@ export default function Works() {
   const shown = category === 'All' ? PROJECTS : PROJECTS.filter((p) => p.disciplines.includes(category));
 
   useReveal(root, [category]);
-  useEffect(() => {
-    document.title = 'Works — Portfolio | Global Arc Solutions';
-  }, []);
 
   return (
     <div ref={root}>
