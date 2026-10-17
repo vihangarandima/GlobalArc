@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { STUDIO, whatsappLink } from '../data/studio';
+import { PROJECTS } from '../data/projects';
 import { Brand, ArrowRight } from './icons';
 import './footer.css';
 
@@ -56,10 +57,11 @@ export default function Footer() {
         </div>
         <div>
           <p className="footer__head">Work</p>
-          <Link to="/work/cricket-factory">Cricket Factory</Link>
-          <Link to="/work/thrive">Thrive</Link>
-          <Link to="/work/caltea">Caltea Ceylon</Link>
-          <Link to="/work/yamu">Yamu Car Rentals</Link>
+          {PROJECTS.map((p) => (
+            <Link key={p.slug} to={`/work/${p.slug}`}>
+              {p.name}
+            </Link>
+          ))}
         </div>
         <div>
           <p className="footer__head">Contact</p>

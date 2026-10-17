@@ -11,6 +11,7 @@ export const PROJECTS = [
     name: 'Cricket Factory',
     client: 'Cricket Factory',
     category: 'E-commerce · 3D retail experience',
+    categories: ['Web'],
     disciplines: ['Web Design', 'Development', 'E-commerce', '3D & Interactive'],
     year: '',
     tagline: 'Where Sri Lanka’s cricketers gear up.',
@@ -45,6 +46,7 @@ export const PROJECTS = [
     name: 'Thrive',
     client: 'Thrive',
     category: 'Brand website · Interactive storytelling',
+    categories: ['Web'],
     disciplines: ['Web Design', 'Development', '3D & Interactive'],
     year: '',
     tagline: 'Your customers can feel the difference.',
@@ -79,6 +81,7 @@ export const PROJECTS = [
     name: 'Caltea Ceylon',
     client: 'Lucky Land Estate',
     category: 'E-commerce · Brand experience',
+    categories: ['Web'],
     // Used by the work filter. Keep to the names in DISCIPLINES below.
     disciplines: ['Web Design', 'Development', 'E-commerce'],
     year: '2026',
@@ -120,7 +123,8 @@ export const PROJECTS = [
     name: 'Yamu Car Rentals',
     client: 'Yamu Car Rentals',
     category: 'Web application · Marketplace',
-    disciplines: ['Web Design', 'Development', 'Web Apps'],
+    categories: ['Web', 'Systems'],
+    disciplines: ['Web Design', 'Development', 'Web Apps', 'Systems'],
     year: '2026',
     tagline: 'Island-wide car hire, found in one search.',
     summary:
@@ -148,10 +152,123 @@ export const PROJECTS = [
     value: 'Turns a market run on phone calls into a single search — for renters, for fleet owners and for the team running it.',
     results: [],
   },
+  {
+    slug: 'car-lk',
+    index: '05',
+    name: 'Car.lk',
+    client: 'Car.lk',
+    category: 'Automotive marketplace · Luxury vehicle platform',
+    categories: ['Web', 'Systems'],
+    disciplines: ['Web Design', 'Development', 'Web Apps', 'Systems'],
+    year: '2026',
+    tagline: 'Drive the exceptional.',
+    summary:
+      'A luxury automotive marketplace for Sri Lanka featuring verified premium, reconditioned and brand-new vehicles — with instant search, 5-point inspection breakdowns, dealer listings and editorial highway test drives.',
+    accent: '#e59a38',
+    cover: '/projects/car-lk/hero',
+    gallery: [
+      { src: '/projects/car-lk/hero', caption: 'Hero — "Drive the Exceptional" with make, model and budget search' },
+      { src: '/projects/car-lk/after-dark', caption: 'Editorial — "Colombo to Galle in Seventy Minutes" night drive' },
+      { src: '/projects/car-lk/inspection', caption: '5-point vehicle inspection — body, cabin, electronics, lights and controls' },
+      { src: '/projects/car-lk/inventory', caption: 'Vehicle marketplace grid — live inventory with dealer verification and pricing' },
+      { src: '/projects/car-lk/sell', caption: 'Seller onboarding — "Your Car. Our Stage" with 4-minute listing flow' },
+    ],
+    liveUrl: 'https://car.lk/',
+    githubUrl: '',
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Node.js'],
+    features: [
+      'Instant vehicle search by make, model and budget',
+      '5-point inspection showcase with macro imagery',
+      'Verified dealer listings with live specs and pricing',
+      '4-minute seller onboarding pipeline with plate lookup',
+      'Southern Expressway night drive editorial series',
+    ],
+    story: {
+      concept:
+        'Car buying in Sri Lanka was scattered across noisy classifieds with unverified claims and poor imagery. Car.lk brings the standard of an international luxury showroom to every screen.',
+      design:
+        'Cinematic automotive aesthetic: night-time road photography, high-contrast typography, warm amber accents, and an inspection gallery that celebrates craftsmanship.',
+      development:
+        'Fast search filters with instant typeahead, two-sided flows for buyers and certified dealers, responsive listing cards with comparison features, and a rapid seller onboarding pipeline.',
+    },
+    value: 'Replaces noisy classifieds with a trusted, editorial showroom for Sri Lanka’s luxury and reconditioned car market.',
+    results: [],
+  },
+  {
+    slug: 'tools-mahagedara',
+    index: '06',
+    name: 'Tools Mahagedara',
+    client: 'Tools Mahagedara Kalutara',
+    category: 'Industrial e-commerce · Hardware catalog & payment portal',
+    categories: ['Web', 'Systems'],
+    disciplines: ['Web Design', 'Development', 'E-commerce', 'Systems'],
+    year: '2026',
+    tagline: 'Engineered power. Built for professionals.',
+    summary:
+      'An industrial e-commerce store and secure payment portal for Kalutara’s premier power tools dealer — featuring contractor-grade catalog filtering, LankaPay / LankaQR checkouts, in-house workshop showcase and dual invoice settlement.',
+    accent: '#f59e0b',
+    cover: '/projects/tools-mahagedara/hero',
+    gallery: [
+      { src: '/projects/tools-mahagedara/hero', caption: 'Hero — "Engineered Power. Built for Professionals" with featured BOSCH cordless drill' },
+      { src: '/projects/tools-mahagedara/catalog', caption: 'Hardware & tool catalog — contractor-grade machinery with brand and category filters' },
+      { src: '/projects/tools-mahagedara/showroom', caption: 'Kalutara depot showcase — live testing station, repair workshop and courier bay' },
+      { src: '/projects/tools-mahagedara/checkout', caption: 'Secure payment portal — LankaPay debit/credit, LankaQR and Koko installment gateway' },
+    ],
+    liveUrl: '',
+    githubUrl: '',
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'LankaPay Gateway', 'LankaQR'],
+    features: [
+      'Multi-brand contractor tool catalog (DeWALT, BOSCH, MAKITA, DongCheng)',
+      'Multi-method payment portal with LankaPay, LankaQR and Koko installments',
+      'Dual-purpose checkout: buy cart items or settle service repair invoices',
+      'Showroom and workshop showcase with testing station & repair hub',
+      'Island-wide cash-on-delivery courier dispatch across 25 districts',
+    ],
+    story: {
+      concept:
+        'Tools Mahagedara needed a digital storefront as rugged and reliable as the machinery they import. The platform had to serve both retail buyers and commercial contractors across Sri Lanka.',
+      design:
+        'Industrial high-contrast visual identity with safety hazard striping, bold cautionary amber accents, high-density specification tables, and clear warranty markers.',
+      development:
+        'Fast faceted search across tool brands and voltage platforms, an integrated LankaPay payment gateway supporting local bank apps via LankaQR, and dual-mode invoice payment for workshop servicing.',
+    },
+    value: 'Streamlines machinery purchasing and repair invoicing for commercial builders and workshops island-wide.',
+    results: [],
+  },
 ];
 
-// Filter categories, in display order. Only those used by at least one
-// project are shown.
+// Work categories for filtering projects
+export const WORK_CATEGORIES = ['All', 'Web', 'Mobile App', 'Systems'];
+
+export const projectMatchesCategory = (project, category) => {
+  if (!category || category === 'All') return true;
+  if (project.categories?.includes(category)) return true;
+  if (category === 'Web') {
+    return (
+      project.disciplines?.some((d) => d.includes('Web')) ||
+      project.category?.toLowerCase().includes('web') ||
+      project.category?.toLowerCase().includes('brand') ||
+      project.category?.toLowerCase().includes('e-commerce')
+    );
+  }
+  if (category === 'Systems') {
+    return (
+      project.disciplines?.includes('Systems') ||
+      project.disciplines?.includes('Web Apps') ||
+      project.category?.toLowerCase().includes('application') ||
+      project.category?.toLowerCase().includes('system')
+    );
+  }
+  if (category === 'Mobile App') {
+    return (
+      project.disciplines?.includes('Mobile') ||
+      project.category?.toLowerCase().includes('mobile')
+    );
+  }
+  return false;
+};
+
+// Filter categories (kept for backwards compatibility)
 export const DISCIPLINES = ['Web Design', 'Development', 'E-commerce', 'Web Apps', '3D & Interactive', 'Branding'];
 
 export const getProject = (slug) => PROJECTS.find((p) => p.slug === slug);
