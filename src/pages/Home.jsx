@@ -233,6 +233,57 @@ function Finale() {
   );
 }
 
+function Feedback() {
+  return (
+    <section id="feedback" className="section feedback" aria-labelledby="feedback-title">
+      <div className="feedback__glow" aria-hidden="true" />
+      <div className="wrap feedback__wrap">
+        <div className="feedback__card" data-reveal>
+          <div className="feedback__top">
+            <span className="tag" id="feedback-title">Customer Feedback</span>
+            <div className="feedback__stars-wrap">
+              <div className="feedback__stars" aria-label="5 out of 5 stars">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="feedback__star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="feedback__rating">5.0 Star Rating</span>
+            </div>
+          </div>
+
+          <blockquote className="feedback__quote">
+            “Working with Global Arc Solutions was a game changer for our digital presence. Their <em>engineering precision</em>, speed of execution, and deep understanding of modern UI/UX set them leagues apart. The platform they built was flawless from day one — fast, scalable, and beautifully designed.”
+          </blockquote>
+
+          <div className="feedback__author">
+            <div className="feedback__avatar-box">
+              <img
+                src="/testimonials/thivina-pahasara-square.webp"
+                alt="Thivina Pahasara"
+                className="feedback__avatar"
+                width="60"
+                height="60"
+                loading="lazy"
+              />
+              <span className="feedback__verified-badge" title="Verified Customer" aria-label="Verified Customer">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="2.5 6 4.8 8.5 9.5 3.5" />
+                </svg>
+              </span>
+            </div>
+            <div className="feedback__meta">
+              <cite className="feedback__name">Thivina Pahasara</cite>
+              <p className="feedback__role">Verified Client &amp; Project Partner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const root = useRef(null);
   useReveal(root);
@@ -248,6 +299,7 @@ export default function Home() {
       <Platforms />
       <Packages />
       <Approach />
+      <Feedback />
       <section id="faq" className="section faq-section" aria-labelledby="faq-title">
         <div className="wrap">
           <h2 id="faq-title" className="h2 section-title" data-reveal>

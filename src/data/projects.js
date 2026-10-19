@@ -235,6 +235,135 @@ export const PROJECTS = [
     value: 'Streamlines machinery purchasing and repair invoicing for commercial builders and workshops island-wide.',
     results: [],
   },
+  {
+    slug: 'aqualume',
+    index: '07',
+    name: 'Aqualume',
+    client: 'Aqualume Aquatics, Dehiwala',
+    category: 'E-commerce · Immersive retail experience',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development', 'E-commerce', '3D & Interactive'],
+    year: '2026',
+    tagline: 'Hold your breath — the store is the show.',
+    summary:
+      'An immersive online flagship for Dehiwala’s premier live aquarium destination — visitors dive through three scroll-driven aquatic scenes (planted aquascape, Japanese koi pond and deep monster tank), browse quarantined livestock and equipment, and engineer custom setups with a real-time tank compatibility builder.',
+    accent: '#5eead4',
+    cover: '/projects/aqualume/hero',
+    gallery: [
+      { src: '/projects/aqualume/hero', caption: 'The planted tank — “A forest underwater”, with glowing markers on every fish and plant' },
+      { src: '/projects/aqualume/koi', caption: 'The koi pond — “Living jewels”, a scroll-driven video scene' },
+      { src: '/projects/aqualume/monster', caption: 'The monster room — a torch follows the cursor through the dark to reveal the giants' },
+      { src: '/projects/aqualume/categories', caption: 'What we keep — seven categories, from live fish to equipment' },
+      { src: '/projects/aqualume/builder', caption: 'Tank builder — pick a tank, add fish and plants, see compatibility, stocking and cost live' },
+    ],
+    liveUrl: 'https://aquariumdehiwala.vercel.app/',
+    githubUrl: 'https://github.com/vihangarandima/aquarium_dehiwala',
+    stack: ['HTML5 Canvas', 'CSS3', 'JavaScript (ES6+)', 'GSAP ScrollTrigger', 'Lenis Smooth Scroll'],
+    features: [
+      'Scroll-driven dive through three living underwater scenes',
+      'Interactive hotspots discovering 14 quarantined aquatic species',
+      'Cursor-tracking flashlight reveal inside the dark monster room',
+      'Filterable catalog for live fish, aquatic flora, tanks and filtration gear',
+      'Real-time interactive tank builder calculating volume, compatibility & cost',
+      'Instant WhatsApp inquiry and concierge live-arrival guarantee',
+    ],
+    story: {
+      concept:
+        'An aquarium destination is a place people visit to marvel, not just to shop. The digital experience needed to capture that quiet wonder of being underwater — while giving hobbyists powerful tools to plan compatible, healthy biotopes.',
+      design:
+        'Deep abyssal teal palette accented by bioluminescent aqua markers, editorial Fraunces serif typography with fluid italics, and scroll-pinned living exhibits. The interface steps out of the way, letting the movement of water and fish take center stage.',
+      development:
+        'Engineered with scroll-pinned video viewports using GSAP ScrollTrigger and Lenis, interactive canvas caustics and cursor torchlight shaders, an intuitive category filter, and a client-side tank builder that checks temperature, pH, and adult temperament compatibility dynamically.',
+    },
+    value: 'Transforms aquarium shopping into an unforgettable sensory experience — and ensures first-time hobbyists build thriving, compatible biotopes.',
+    results: [],
+  },
+  {
+    slug: 'kernel',
+    index: '08',
+    name: 'KERNEL Laptop Care',
+    client: 'KERNEL Laptop Care & Supply',
+    category: 'Repair & retail · 3D scroll story',
+    categories: ['Web', 'Systems'],
+    disciplines: ['Web Design', 'Development', 'E-commerce', '3D & Interactive'],
+    year: '2026',
+    tagline: 'Every machine has a story. We keep it going.',
+    summary:
+      'A website for a Colombo laptop repair and sales shop, told as one continuous 3D scene: a laptop opens, overheats, comes apart layer by layer to show each repair service, gets diagnosed and rebuilt — then joins the shelf of laptops for sale.',
+    accent: '#22d3ee',
+    cover: '/projects/kernel/hero',
+    gallery: [
+      { src: '/projects/kernel/hero', caption: 'Hero — a laptop lid opens in the dark as the story begins' },
+      { src: '/projects/kernel/fault', caption: '“You know the feeling” — the screen glitches and the underside glows with heat' },
+      { src: '/projects/kernel/teardown', caption: 'The teardown — the laptop separates into layers, one for each repair service' },
+      { src: '/projects/kernel/diagnosis', caption: 'Diagnosis — a scan sweeps the motherboard to find the faulty component' },
+      { src: '/projects/kernel/shelf', caption: 'The shelf — quality-checked laptops for sale, with specs, prices and filters' },
+      { src: '/projects/kernel/track', caption: 'Track a repair — the status timeline appears on the laptop’s own screen' },
+    ],
+    liveUrl: 'https://laptop-sample.vercel.app/',
+    githubUrl: '',
+    stack: ['Next.js', 'React', 'React Three Fiber', 'Three.js', 'GSAP ScrollTrigger', 'Lenis'],
+    features: [
+      'One scroll-driven 3D scene from opening to reassembly',
+      'Exploded-view teardown highlighting each of six repair services',
+      'Motherboard diagnosis animation with fault detection',
+      'Laptop shop with specs, prices and new / refurbished filters',
+      'Repair tracking by ticket number and a booking form',
+    ],
+    story: {
+      concept:
+        'Repair work happens behind a counter, out of sight. The site had to show customers exactly what happens to their laptop — and make the shop feel expert and trustworthy before they walk in.',
+      design:
+        'A dark studio with a single laptop under a spotlight, cyan for the parts being worked on and amber for heat and faults. Monospaced readouts give it the feel of a technician’s bench.',
+      development:
+        'A real-time 3D model in React Three Fiber, choreographed to the scroll with GSAP ScrollTrigger and Lenis: it opens, glitches, explodes into its parts, gets scanned and rebuilds itself, then moves onto a shelf of stock for sale.',
+    },
+    value: 'Turns an invisible service into something customers can see — and links repairs and sales in one story.',
+    results: [],
+  },
+  {
+    slug: 'ransiri-grand',
+    index: '09',
+    name: 'Ransiri Grand',
+    client: 'Ransiri Grand, Negombo',
+    category: 'Wedding venue · Brand website & booking',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development'],
+    year: '2026',
+    tagline: 'Sri Lanka’s seaside home for weddings & celebrations.',
+    summary:
+      'A website for a seaside wedding and events venue in Negombo — five spaces to explore, ceremonies for every faith, short films and a photo gallery, clear per-guest packages, and a calendar to check dates and book a site visit.',
+    accent: '#c08a4a',
+    cover: '/projects/ransiri-grand/hero',
+    gallery: [
+      { src: '/projects/ransiri-grand/hero', caption: 'Hero — the venue by the sea, with an availability check for date, guests and space' },
+      { src: '/projects/ransiri-grand/spaces', caption: 'Explore our five spaces — a drag-and-swipe carousel from ballroom to seaside lawn' },
+      { src: '/projects/ransiri-grand/traditions', caption: 'Every tradition, done properly — Sinhala, Muslim, Tamil Hindu and Christian ceremonies' },
+      { src: '/projects/ransiri-grand/moments', caption: 'A day, frame by frame — four short films of real celebrations' },
+      { src: '/projects/ransiri-grand/gallery', caption: 'The gallery — portraits, décor and details from recent weddings' },
+      { src: '/projects/ransiri-grand/book', caption: 'Book a visit — an availability calendar with Poya days, and an enquiry form' },
+    ],
+    liveUrl: 'https://weddinghall-eight.vercel.app/',
+    githubUrl: '',
+    stack: ['HTML', 'CSS', 'JavaScript', 'GSAP ScrollTrigger', 'Lenis'],
+    features: [
+      'Availability check by celebration, date, guests and space',
+      'Swipeable showcase of five event spaces with capacities',
+      'Ceremony guides for Sinhala, Muslim, Tamil Hindu and Christian weddings',
+      'Short films and a photo gallery of real celebrations',
+      'Per-guest packages, FAQs and a booking calendar with Poya days',
+    ],
+    story: {
+      concept:
+        'Families choosing a wedding venue want to know it understands their traditions, has the right space and fits their budget. The site answers all three before the first phone call.',
+      design:
+        'Warm ivory, soft gold and an elegant italic serif, with the sea and the ceremonies carrying the page. A floating menu shows how far through the page you are.',
+      development:
+        'An availability search in the hero, a draggable spaces carousel, tabbed ceremony guides, video and photo galleries, transparent packages and a calendar-based enquiry form that marks Poya days.',
+    },
+    value: 'Helps families of every faith see their day at the venue — and turns that into a booked site visit.',
+    results: [],
+  },
 ];
 
 // Work categories for filtering projects

@@ -50,6 +50,8 @@ export default function App() {
           <Route path="/works" element={<Works />} />
           <Route path="/work/:slug" element={<CaseStudy />} />
           {/* The previous site's pages, so old links still land somewhere sensible */}
+          <Route path="/work/aquariumdehiwala" element={<Navigate to="/work/aqualume" replace />} />
+          <Route path="/work/aquarium-dehiwala" element={<Navigate to="/work/aqualume" replace />} />
           <Route path="/case-studies" element={<Navigate to="/works" replace />} />
           <Route path="/services" element={<Navigate to="/#services" replace />} />
           <Route path="/process" element={<Navigate to="/#approach" replace />} />
