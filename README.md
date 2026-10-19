@@ -1,4 +1,4 @@
-# WEB CEYLON
+# Global Arc Solutions
 
 The studio site: a small Vite + React single-page app. No animation or 3D
 libraries — the 3D work ring, marquees and reveals are plain CSS and a

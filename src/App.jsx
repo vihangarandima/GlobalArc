@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './lib/theme';
+import { headTags, pageMeta } from './lib/seo';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Works from './pages/Works';
 import CaseStudy from './pages/CaseStudy';
+import Contact from './pages/Contact';
 
 // New page: start at the top. A /#section link: go to that section once the
 // page has rendered.
@@ -22,6 +24,17 @@ function ScrollManager() {
   return null;
 }
 
+// Swap the page's title, description, canonical and JSON-LD on navigation.
+// The prerendered HTML already has them; this keeps them right afterwards.
+function SeoManager() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    document.head.querySelectorAll('[data-seo]').forEach((el) => el.remove());
+    document.head.insertAdjacentHTML('afterbegin', headTags(pageMeta(pathname)));
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
     <ThemeProvider>
@@ -29,6 +42,7 @@ export default function App() {
         Skip to content
       </a>
       <ScrollManager />
+      <SeoManager />
       <Header />
       <main id="main">
         <Routes>
@@ -40,7 +54,7 @@ export default function App() {
           <Route path="/services" element={<Navigate to="/#services" replace />} />
           <Route path="/process" element={<Navigate to="/#approach" replace />} />
           <Route path="/heritage-and-vision" element={<Navigate to="/#intro" replace />} />
-          <Route path="/contact" element={<Navigate to="/#contact" replace />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

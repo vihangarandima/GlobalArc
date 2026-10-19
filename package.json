@@ -1,18 +1,19 @@
 {
-  "name": "webceylon",
+  "name": "globalarc",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.0"
+    "react-router-dom": "^6.23.0",
+    "simple-icons": "^13.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.1",

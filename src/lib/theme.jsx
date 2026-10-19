@@ -4,7 +4,8 @@ const ThemeCtx = createContext({ theme: 'dark', toggle: () => {} });
 
 const read = () => {
   try {
-    return localStorage.getItem('wc-theme') === 'light' ? 'light' : 'dark';
+    const saved = localStorage.getItem('ga-theme') || localStorage.getItem('wc-theme');
+    return saved === 'light' ? 'light' : 'dark';
   } catch {
     return 'dark';
   }
@@ -18,7 +19,7 @@ export function ThemeProvider({ children }) {
     document.documentElement.dataset.theme = theme;
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'light' ? '#f5f5f3' : '#000000');
     try {
-      localStorage.setItem('wc-theme', theme);
+      localStorage.setItem('ga-theme', theme);
     } catch {
       /* storage blocked — the switch still works for this visit */
     }

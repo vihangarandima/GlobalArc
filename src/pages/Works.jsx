@@ -1,57 +1,32 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PROJECTS, DISCIPLINES } from '../data/projects';
+import { PROJECTS, WORK_CATEGORIES, projectMatchesCategory } from '../data/projects';
 import useReveal from '../lib/useReveal';
 import Picture from '../components/Picture';
 import ContactCta from '../components/ContactCta';
 import './works.css';
 
-// A category picker in the shape of a single pill: label, current choice,
-// count, chevron. Opens a small list.
-function CategoryPicker({ value, options, onChange }) {
-  const [open, setOpen] = useState(false);
-  const box = useRef(null);
-
-  useEffect(() => {
-    if (!open) return;
-    const close = (e) => !box.current?.contains(e.target) && setOpen(false);
-    const key = (e) => e.key === 'Escape' && setOpen(false);
-    document.addEventListener('pointerdown', close);
-    document.addEventListener('keydown', key);
-    return () => {
-      document.removeEventListener('pointerdown', close);
-      document.removeEventListener('keydown', key);
-    };
-  }, [open]);
-
-  const count = options.find(([n]) => n === value)?.[1] ?? 0;
+// Filter buttons: All, Web, Mobile App, Systems
+function WorkFilterButtons({ value, categories, counts, onChange }) {
   return (
-    <div ref={box} className={`picker${open ? ' is-open' : ''}`}>
-      <button className="picker__btn" aria-haspopup="listbox" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
-        <span className="picker__label">Category</span>
-        <span className="picker__value">{value}</span>
-        <span className="picker__count">{count}</span>
-        <span className="picker__chev" aria-hidden="true" />
-      </button>
-      {open && (
-        <ul className="picker__list" role="listbox" aria-label="Category">
-          {options.map(([name, n]) => (
-            <li key={name}>
-              <button
-                role="option"
-                aria-selected={name === value}
-                onClick={() => {
-                  onChange(name);
-                  setOpen(false);
-                }}
-              >
-                {name}
-                <span>{n}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
+    <div className="works__filter-bar" role="tablist" aria-label="Filter works by category">
+      {categories.map((cat) => {
+        const isActive = cat === value;
+        const count = counts[cat] ?? 0;
+        return (
+          <button
+            key={cat}
+            role="tab"
+            type="button"
+            aria-selected={isActive}
+            className={`works__filter-btn${isActive ? ' is-active' : ''}`}
+            onClick={() => onChange(cat)}
+          >
+            <span className="works__filter-name">{cat}</span>
+            <span className="works__filter-count" aria-label={`${count} projects`}>{count}</span>
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -77,16 +52,19 @@ export default function Works() {
   const root = useRef(null);
   const [category, setCategory] = useState('All');
 
-  const options = useMemo(() => {
-    const used = DISCIPLINES.filter((d) => PROJECTS.some((p) => p.disciplines?.includes(d)));
-    return [['All', PROJECTS.length], ...used.map((d) => [d, PROJECTS.filter((p) => p.disciplines.includes(d)).length])];
+  const counts = useMemo(() => {
+    const map = {};
+    for (const cat of WORK_CATEGORIES) {
+      map[cat] = cat === 'All' ? PROJECTS.length : PROJECTS.filter((p) => projectMatchesCategory(p, cat)).length;
+    }
+    return map;
   }, []);
-  const shown = category === 'All' ? PROJECTS : PROJECTS.filter((p) => p.disciplines.includes(category));
+
+  const shown = useMemo(() => {
+    return PROJECTS.filter((p) => projectMatchesCategory(p, category));
+  }, [category]);
 
   useReveal(root, [category]);
-  useEffect(() => {
-    document.title = 'Works — Web Design Portfolio | WEB CEYLON';
-  }, []);
 
   return (
     <div ref={root}>
@@ -99,16 +77,44 @@ export default function Works() {
           <p className="lead works__lead" data-reveal style={{ '--d': '0.06s' }}>
             Live projects, designed and built end to end by the studio.
           </p>
-          <div className="works__picker" data-reveal style={{ '--d': '0.12s' }}>
-            <CategoryPicker value={category} options={options} onChange={setCategory} />
+          <div className="works__filter-wrap" data-reveal style={{ '--d': '0.12s' }}>
+            <WorkFilterButtons
+              value={category}
+              categories={WORK_CATEGORIES}
+              counts={counts}
+              onChange={setCategory}
+            />
           </div>
-          <ul className="works__grid">
-            {shown.map((p, i) => (
-              <li key={p.slug} data-reveal style={{ '--d': `${(i % 2) * 0.08}s` }}>
-                <WorkCard project={p} eager={i < 2} />
-              </li>
-            ))}
-          </ul>
+          {shown.length > 0 ? (
+            <ul className="works__grid">
+              {shown.map((p, i) => (
+                <li key={p.slug} data-reveal style={{ '--d': `${(i % 2) * 0.08}s` }}>
+                  <WorkCard project={p} eager={i < 2} />
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="works__empty" data-reveal>
+              <span className="works__empty-tag">In Active Production</span>
+              <h2 className="works__empty-title">{category} case studies coming soon</h2>
+              <p className="works__empty-lead">
+                We design and engineer bespoke {category.toLowerCase()}s for ambitious brands.
+                Reach out directly to view our private credentials deck and live demonstrations.
+              </p>
+              <div className="works__empty-actions">
+                <Link to="/contact" className="btn btn--solid">
+                  Inquire About {category}
+                </Link>
+                <button
+                  type="button"
+                  className="btn btn--line"
+                  onClick={() => setCategory('All')}
+                >
+                  View All Projects
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
       <ContactCta />

@@ -132,8 +132,8 @@ export default function EditorShowcase() {
           <i />
           <span>⌕</span> 100%
         </span>
-        <span className="editor__avatars" aria-hidden="true">
-          <b>WC</b>
+        <span className="editor__avatars" aria-hidden="true" title="Global Arc">
+          <b>GA</b>
         </span>
       </div>
 
