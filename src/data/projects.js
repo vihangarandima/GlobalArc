@@ -214,7 +214,7 @@ export const PROJECTS = [
       { src: '/projects/tools-mahagedara/showroom', caption: 'Kalutara depot showcase — live testing station, repair workshop and courier bay' },
       { src: '/projects/tools-mahagedara/checkout', caption: 'Secure payment portal — LankaPay debit/credit, LankaQR and Koko installment gateway' },
     ],
-    liveUrl: '',
+    liveUrl: 'https://tools-mahagedara.vercel.app/',
     githubUrl: '',
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'LankaPay Gateway', 'LankaQR'],
     features: [
