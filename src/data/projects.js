@@ -256,7 +256,7 @@ export const PROJECTS = [
       { src: '/projects/aqualume/categories', caption: 'What we keep — seven categories, from live fish to equipment' },
       { src: '/projects/aqualume/builder', caption: 'Tank builder — pick a tank, add fish and plants, see compatibility, stocking and cost live' },
     ],
-    liveUrl: 'https://aquariumdehiwala.vercel.app/',
+    liveUrl: 'https://aquarium-dehiwala.vercel.app/',
     githubUrl: 'https://github.com/vihangarandima/aquarium_dehiwala',
     stack: ['HTML5 Canvas', 'CSS3', 'JavaScript (ES6+)', 'GSAP ScrollTrigger', 'Lenis Smooth Scroll'],
     features: [
