@@ -364,6 +364,174 @@ export const PROJECTS = [
     value: 'Helps families of every faith see their day at the venue — and turns that into a booked site visit.',
     results: [],
   },
+  {
+    slug: 'chathura-tyre-house',
+    index: '10',
+    name: 'Chathura Tyre House',
+    client: 'Chathura Tyre House, Polonnaruwa',
+    category: 'Automotive services · Local business website',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development'],
+    year: '2026',
+    tagline: 'Grip the road.',
+    summary:
+      'A website for a tyre, alloy wheel and wheel alignment shop on the A11 in Polonnaruwa — shop by vehicle, popular sizes in stock, a wall of alloy styles, a tyre-code decoder and directions to the red building.',
+    accent: '#e11d1d',
+    cover: '/projects/chathura-tyre-house/hero',
+    gallery: [
+      { src: '/projects/chathura-tyre-house/hero', caption: 'Hero — “Grip the road”, with the Google rating, opening hours and WhatsApp' },
+      { src: '/projects/chathura-tyre-house/services', caption: 'Three things, done properly — tyres, alloy wheels and wheel alignment' },
+      { src: '/projects/chathura-tyre-house/tyres', caption: 'Tyres in stock — popular sizes filtered by car, SUV, van, three-wheeler and bike' },
+      { src: '/projects/chathura-tyre-house/alloys', caption: 'The alloy wall — rims from 13″ to 20″, filtered by style' },
+      { src: '/projects/chathura-tyre-house/alignment', caption: 'Wheel alignment — camber and toe readings and the signs you need it' },
+      { src: '/projects/chathura-tyre-house/decoder', caption: 'Read your tyre — tap any part of the sidewall code to see what it means' },
+      { src: '/projects/chathura-tyre-house/visit', caption: 'Find us — address, phone numbers, daily hours and directions' },
+    ],
+    liveUrl: 'https://chathuratyrehouse.vercel.app/',
+    githubUrl: '',
+    stack: ['Next.js', 'React'],
+    features: [
+      'Shop by vehicle, from three-wheelers to SUVs',
+      'Popular tyre sizes with stock checks over WhatsApp',
+      'Alloy wheel wall filtered by style',
+      'Interactive tyre sidewall code decoder',
+      'English and Sinhala, live open / closed status',
+    ],
+    story: {
+      concept:
+        'Most customers arrive with one question — do you have my size? The site answers it by vehicle and size, then gets them on WhatsApp or on the road to the shop.',
+      design:
+        'Bold condensed type, tread-black and signal red taken from the shop front itself. Big numbers, short lines and buttons a thumb can find on the highway.',
+      development:
+        'A vehicle picker, filterable size and alloy grids that open WhatsApp with the item already named, a tap-to-explain tyre code decoder, a language switch and opening hours that show whether the shop is open right now.',
+    },
+    value: 'Turns “do you have my size?” into a WhatsApp message and a visit — without a phone call.',
+    results: [],
+  },
+  {
+    slug: 'maison-ossane',
+    index: '11',
+    name: 'Maison Ossane',
+    client: 'Maison Ossane',
+    category: 'Fashion e-commerce · Editorial storefront',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development', 'E-commerce'],
+    year: '2026',
+    tagline: 'The art of quiet tailoring.',
+    summary:
+      'An editorial storefront for a Colombo womenswear atelier — curated collections, a seasonal lookbook, new arrivals with bag and wishlist, and the story of how each piece is made.',
+    accent: '#a9825a',
+    cover: '/projects/maison-ossane/hero',
+    gallery: [
+      { src: '/projects/maison-ossane/hero', caption: 'Hero — “The art of quiet tailoring”, Collection N°12' },
+      { src: '/projects/maison-ossane/collections', caption: 'Curated collections — tailoring, resort whites, bridal and occasion' },
+      { src: '/projects/maison-ossane/lookbook', caption: 'The lookbook — Collection N°12, look by look' },
+      { src: '/projects/maison-ossane/shop', caption: 'New arrivals — eight pieces with prices, add to bag and wishlist' },
+      { src: '/projects/maison-ossane/story', caption: 'The atelier — “Made slowly, worn for years”' },
+    ],
+    liveUrl: 'https://clothx.vercel.app/',
+    githubUrl: '',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    features: [
+      'Curated collections and a seasonal lookbook',
+      'New arrivals with shopping bag and wishlist drawers',
+      'Product search',
+      'Atelier story and newsletter sign-up',
+    ],
+    story: {
+      concept:
+        'A tailoring house sells on restraint and craft. The store needed to feel like a fashion magazine first and a shop second — without making buying any harder.',
+      design:
+        'Warm ivory, soft browns and a Cormorant Garamond voice with italic accents. Generous white space and large photography let the clothes carry the page.',
+      development:
+        'A dependency-free build: collections, lookbook and a product grid with a sliding bag, wishlist and search, all in plain HTML, CSS and JavaScript for a fast first load.',
+    },
+    value: 'Gives an atelier a storefront that feels as considered as its clothes.',
+    results: [],
+  },
+  {
+    slug: 'style-365',
+    index: '12',
+    name: 'STYLE 365',
+    client: 'STYLE 365',
+    category: 'Fashion e-commerce · Social-first storefront',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development', 'E-commerce'],
+    year: '2026',
+    tagline: 'Define your style. Own your world.',
+    summary:
+      'An online store for a women’s fashion label that grew on TikTok — curated collections, trending pieces with a cart and wishlist, and the TikTok feed brought onto the page.',
+    accent: '#8b3dff',
+    cover: '/projects/style-365/hero',
+    gallery: [
+      { src: '/projects/style-365/hero', caption: 'Hero — “Define your style, own your world” with a featured look' },
+      { src: '/projects/style-365/collections', caption: 'Curated collections — Everyday Silks, Vibrant Evening and Casual Chic' },
+      { src: '/projects/style-365/new-in', caption: 'Trending pieces — add to bag straight from the grid' },
+      { src: '/projects/style-365/tiktok', caption: 'Real looks, real vibes — the TikTok feed on the page' },
+    ],
+    liveUrl: 'https://style365-gamma.vercel.app/',
+    githubUrl: '',
+    stack: ['HTML', 'Tailwind CSS', 'JavaScript'],
+    features: [
+      'Curated collections and trending pieces',
+      'Cart drawer, wishlist and product search',
+      'TikTok feed and follower count on the page',
+      'Mobile bottom dock for search and cart',
+    ],
+    story: {
+      concept:
+        'The brand’s audience already lives on TikTok. The store had to feel like the feed they know — bright, personal and quick to buy from.',
+      design:
+        'Violet and magenta gradients, wide Syne display type and rounded cards, with real customers’ photos doing the selling.',
+      development:
+        'A Tailwind build with a cart drawer, wishlist, search and toasts, a TikTok section that links back to the feed, and a bottom dock that keeps the bag one tap away on phones.',
+    },
+    value: 'Turns a TikTok following into a store of its own.',
+    results: [],
+  },
+  {
+    slug: 'golden-flower',
+    index: '13',
+    name: 'Golden Flower',
+    client: 'Golden Flower, Hingurakgoda',
+    category: 'Wedding venue · Brand website',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development'],
+    year: '2026',
+    tagline: 'Vows by morning. Lights by night.',
+    summary:
+      'A website for a family-run wedding venue in Hingurakgoda — the garden and hall in five moods, the wedding day hour by hour from the nekath to the last dance, packages, a gallery and a date check.',
+    accent: '#d4a64a',
+    cover: '/projects/golden-flower/hero',
+    gallery: [
+      { src: '/projects/golden-flower/hero', caption: 'Hero — “Vows by morning. Lights by night.” with the garden after dark' },
+      { src: '/projects/golden-flower/venues', caption: 'One garden, five moods — lawn, garden lights, stage, table and hall' },
+      { src: '/projects/golden-flower/day', caption: 'A day here — from your nekath to the last dance, hour by hour' },
+      { src: '/projects/golden-flower/packages', caption: 'Three ways to begin — ceremony, reception and both days' },
+      { src: '/projects/golden-flower/gallery', caption: 'From the last few seasons — stages and tables from real weddings' },
+      { src: '/projects/golden-flower/book', caption: 'Tell us your date — availability check, WhatsApp and contacts' },
+    ],
+    liveUrl: 'https://goldenflower.vercel.app/',
+    githubUrl: '',
+    stack: ['Next.js', 'React', 'Lenis'],
+    features: [
+      'Five venue spaces in a scrolling showcase',
+      'Wedding day timeline built around the nekath',
+      'Today’s sunset time for planning photographs',
+      'Packages, gallery, rooms and kitchen',
+      'Date and guest availability check with WhatsApp',
+    ],
+    story: {
+      concept:
+        'Couples here plan around the auspicious time their astrologer gives. The site tells the day the way families think about it — starting from the nekath.',
+      design:
+        'Deep garden green and night black with gold, a high-contrast Bodoni serif and photographs of the venue’s own stages and tables.',
+      development:
+        'Smooth-scrolling Next.js pages with a venue carousel, a timed day-in-the-life sequence, the day’s sunset time for Hingurakgoda, and a date check that hands off to WhatsApp.',
+    },
+    value: 'Shows families the whole day on one plot — and gets their date into the conversation.',
+    results: [],
+  },
 ];
 
 // Work categories for filtering projects
