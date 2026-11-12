@@ -532,6 +532,135 @@ export const PROJECTS = [
     value: 'Shows families the whole day on one plot — and gets their date into the conversation.',
     results: [],
   },
+  {
+    slug: 'chilies-lathpandura',
+    index: '14',
+    name: 'Chilies Lathpandura',
+    client: 'Chilies Lathpandura, Polonnaruwa',
+    category: 'Restaurant · Menu & ordering website',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development'],
+    year: '2026',
+    tagline: 'Every day is a spice day.',
+    summary:
+      'A website for a restaurant, grill and bar with pastries and rooms in Kaduruwela, Polonnaruwa — the week’s offer up front, a filterable menu you can build an order from, and one tap to call, book or get directions.',
+    accent: '#e11d2a',
+    cover: '/projects/chilies-lathpandura/hero',
+    gallery: [
+      { src: '/projects/chilies-lathpandura/hero', caption: 'Hero carousel — “Pastries and everything”, one of the rotating slides' },
+      { src: '/projects/chilies-lathpandura/offers', caption: 'Offers — delivery on PickMe and the week’s biriyani and free mojito deal' },
+      { src: '/projects/chilies-lathpandura/menu', caption: 'Popular dishes — filtered by category, with heat levels, prices and add to order' },
+      { src: '/projects/chilies-lathpandura/more', caption: 'More than a restaurant — the dining room, grill and bar, and rooms' },
+      { src: '/projects/chilies-lathpandura/news', caption: 'What’s cooking — offers, delivery, rooms and job openings' },
+      { src: '/projects/chilies-lathpandura/contact', caption: 'Book a table for tonight — three phone numbers, Facebook and directions' },
+    ],
+    liveUrl: 'https://lathpandura-chillies.vercel.app/',
+    githubUrl: '',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    features: [
+      'Rotating hero with the week’s offer',
+      'Menu filtered by category, with heat levels and prices',
+      'Order list to confirm by phone',
+      'Restaurant, grill & bar, pastries and rooms in one place',
+      'News cards for offers, delivery and hiring',
+    ],
+    story: {
+      concept:
+        'Most visitors want three things: what is good this week, what it costs and how to get it. The site puts the offer first, the menu second and the phone number everywhere.',
+      design:
+        'Charcoal, chili red and lime green, with tall Big Shoulders headlines like a street-food sign and photography of the actual dishes.',
+      development:
+        'A lightweight static build: a slide carousel, a category-filtered menu that collects dishes into an order to confirm by phone, a news carousel and click-to-call numbers.',
+    },
+    value: 'Turns hungry browsing into a phone order or a booked table.',
+    results: [],
+  },
+  {
+    slug: 'spunchy',
+    index: '15',
+    name: 'Spunchy',
+    client: 'Spunchy',
+    category: 'Bakery · Online ordering for pickup',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development', 'E-commerce'],
+    year: '2026',
+    tagline: 'Cake is the language of love.',
+    summary:
+      'An online cabinet for a pastry and bakery brand with four outlets around Colombo — today’s favourites, the full menu by category, celebration cakes to order and pickup at the nearest Spunchy.',
+    accent: '#8a1c2b',
+    cover: '/projects/spunchy/hero',
+    gallery: [
+      { src: '/projects/spunchy/hero', caption: 'Hero — the viral Choco Brick, one of the rotating slides' },
+      { src: '/projects/spunchy/favourites', caption: 'Straight from the cabinet — today’s favourites with prices and add to bag' },
+      { src: '/projects/spunchy/categories', caption: 'Shop by category — cakes, signatures, slices, savory and bread' },
+      { src: '/projects/spunchy/menu', caption: 'The full menu — every item in the cabinet, grouped by category' },
+      { src: '/projects/spunchy/instagram', caption: 'Fresh from the feed — @spunchy.lk on the page' },
+      { src: '/projects/spunchy/outlets', caption: 'Four Spunchy outlets — directions and a call button for each' },
+    ],
+    liveUrl: 'https://spunchy-h8cy.vercel.app/',
+    githubUrl: '',
+    stack: ['React', 'Vite', 'Lenis'],
+    features: [
+      'Order online, pick up at one of four outlets',
+      'Full menu across five categories',
+      'Celebration cakes made to order',
+      'Bag with search',
+      'Instagram feed and outlet directions',
+    ],
+    story: {
+      concept:
+        'People already know Spunchy from the cabinet and from Instagram. The site had to feel like that cabinet — and let them order before they leave home.',
+      design:
+        'Plum, blush and egg-yolk yellow, chunky Bricolage Grotesque headlines with a Newsreader italic, and every item cut out on a soft colour disc.',
+      development:
+        'A React and Vite build with smooth scrolling, a hero carousel, category browsing, a bag for pickup orders, an Instagram section and an outlet finder.',
+    },
+    value: 'Puts the whole cabinet online — so customers order before they get to the counter.',
+    results: [],
+  },
+  {
+    slug: 'brides-world',
+    index: '16',
+    name: 'Bride’s World',
+    client: 'Bride’s World',
+    category: 'Bridal rental · Brand website & booking',
+    categories: ['Web'],
+    disciplines: ['Web Design', 'Development'],
+    year: '2026',
+    tagline: 'Where purity meets prestige.',
+    summary:
+      'A website for a luxury bridal Kandyan saree and lehenga rental studio — browse each design by code, save favourites to a fitting bag, see real brides in them, and book a showroom fitting on WhatsApp.',
+    accent: '#c9a86a',
+    cover: '/projects/brides-world/hero',
+    gallery: [
+      { src: '/projects/brides-world/hero', caption: 'Hero — The Pearl Kandyan, one of the sarees in the rotating showcase' },
+      { src: '/projects/brides-world/moments', caption: 'Fitting moments — brides who chose their saree in the showroom' },
+      { src: '/projects/brides-world/collections', caption: 'The collections — bridal Kandyan, bridal lehenga and modern Kandyan' },
+      { src: '/projects/brides-world/how', caption: 'How rental works — choose online, book a fitting, try it on, wear it' },
+      { src: '/projects/brides-world/lookbook', caption: 'Real brides — weddings dressed by Bride’s World across Sri Lanka' },
+      { src: '/projects/brides-world/showroom', caption: 'Visit the showroom — fittings by appointment, WhatsApp and call' },
+    ],
+    liveUrl: 'https://bridal-saree.vercel.app/',
+    githubUrl: '',
+    stack: ['Next.js', 'React', 'Lenis'],
+    features: [
+      'Rotating showcase of signature sarees',
+      'Three collections, each design with its own code',
+      'First-fitting and rental options explained',
+      'Fitting bag sent to the showroom on WhatsApp',
+      'Real brides lookbook and seasonal booking offer',
+    ],
+    story: {
+      concept:
+        'Choosing a bridal saree is a family decision made in a fitting room. The site does the browsing beforehand, so the showroom hour goes on the sarees that matter.',
+      design:
+        'Near-black backgrounds that let the ivory and gold zari glow, a tall Bodoni display face and editorial photography of real brides.',
+      development:
+        'Smooth-scrolling Next.js pages with a saree carousel, collections by design code, a fitting bag that hands off to WhatsApp, a lookbook and a countdown for the season’s booking offer.',
+    },
+    value: 'Brings brides to the showroom already knowing which sarees they want to try.',
+    results: [],
+  },
 ];
 
 // Work categories for filtering projects
